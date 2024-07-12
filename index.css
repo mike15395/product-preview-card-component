@@ -37,6 +37,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: var(--cream);
+    
 }
 
 .main {
@@ -145,6 +146,7 @@ button:hover {
     .card {
         flex-direction: row;
         width: 100%;
+        margin: auto;
     }
 
     .image-section{
