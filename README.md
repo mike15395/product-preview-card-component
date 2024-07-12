@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/mike15395/product-preview-card-component)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://product-preview-card-component-azure-alpha.vercel.app/)
 
 ## My process
 
