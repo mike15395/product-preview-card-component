@@ -1,100 +1,175 @@
-@import url('https://fonts.google.com/specimen/Montserrat');
-@import url('https://fonts.google.com/specimen/Fraunces');
 
-body{
-    background-color: hsl(30, 38%, 92%);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+    font-weight: 500, 700;
 }
 
-.main{
-    display: flex;
-    width: 50vw;
-    height: 65vh;
-    margin-top: 10%;
-    margin-bottom: 10%;
+@font-face {
+    font-family: 'Fraunces';
+    src: url('Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('truetype');
+    font-weight: 700;
+}
+
+
+ :root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --darker-cyan: hsl(158, 36%, 20%);
+    --cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     
 }
 
-.text-section{
-    border-radius: 0px 10px 10px 0px;
-    padding: 5%;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cream);
 }
 
-.image-product-desktop{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px 0px 0px 10px;
-    width: 25vw;
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-.text-section{
+
+.card {
     background-color: white;
-    width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 40%;
 }
 
-.perfume{
-    font-family: 'Montserrat',sans-serif;
-    text-transform: uppercase;
-    color: grey;
-    letter-spacing: 2px;
-}
-
-.heading{
-    font-size: 36px;
-    font-weight: bolder;
-    font-family: 'Fraunces',sans-serif;
-    margin: 0;
-}
-
-.description{
-    color: grey;
-    font-size: 14px;
-    font-family: 'Montserrat',sans-serif;
-}
-
-.price{
+.image-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 75%;
 }
 
-.actual-price{
-    color:hsl(158, 36%, 37%);
-    font-size: 36px;
-    font-weight: bold;
-    font-family: 'Montserrat',sans-serif;
-}
-
-.previous-price{
-    color: gray;
-    text-decoration: line-through;
-    font-size: 12px;
-}
-
-.cart-icon{
-    margin-right: 10px;
-}
-
-button{
-    background-color: hsl(158, 36%, 37%);
-    padding: 5%;
-    color: white;
+.image-product-desktop {
+    display: none;
     width: 100%;
-    text-align: center;
-    border: none;
-    border-radius: 7px;
+}
+
+.image-product-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.text-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfume {
+    color: #6c6c6c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 24px;
+    color: #222;
+    font-family: "Montserrat";
+}
+
+.description {
+    color: #6c6c6c;
+    line-height: 1.5;
+    font-family: "Montserrat";
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actual-price {
+    font-size: 32px;
     font-weight: bold;
-    margin-top: 7%;
+    font-family: "Fraunces";
+    color: var(--dark-cyan);
+}
+
+.previous-price {
+    color: #969696;
+    font-size: smaller;
+}
+
+button {
+    background-color: var(--dark-cyan);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+}
 
+button:hover {
+    background-color: var(--darker-cyan)
+}
+
+.cart-icon {
+    width: 16px;
+    height: 16px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .image-section{
+       height: 100%;
+        width:100%; 
+    }
+
+    .image-product-desktop {
+        display: block;
+        width:100%;
+        height: 100%;
+    }
+
+    .image-product-mobile {
+        display: none;
+    }
+
+    .text-section {
+        padding: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 36px;
+        line-height: 33px;
+    }
 }

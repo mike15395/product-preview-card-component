@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -16,28 +15,39 @@
   </head>
   <body>
     <main class="main">
-      <div class="image-section">
-        <img
-          src="./images/image-product-desktop.jpg"
-          alt="image-product-desktop"
-          class="image-product-desktop"
-        />
-      </div>
-      <div class="text-section">
-        <p class="perfume">Perfume</p>
-        <p class="heading">Gabrielle Essence Eau De Parfum</p>
-        <p class="description">
-          A floral, solar and voluptuous interpretation composed by Olivier
-          Polge, Perfumer-Creator for the House of CHANEL.
-        </p>
-        <div class="price">
-          <span class="actual-price">$149.99</span>
-          <span class="previous-price">$169.99</span>
+      <div class="card">
+        <div class="image-section">
+          <img
+            src="./images/image-product-desktop.jpg"
+            alt="image-product-desktop"
+            class="image-product-desktop"
+          />
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="image-product-mobile"
+            class="image-product-mobile"
+          />
         </div>
-        <button>
-          <img src="./images/icon-cart.svg" alt="icon-cart" class="cart-icon" />
-          Add to Cart
-        </button>
+        <div class="text-section">
+          <p class="perfume">Perfume</p>
+          <h1 class="heading">Gabrielle Essence Eau De Parfum</h1>
+          <p class="description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="price">
+            <span class="actual-price">$149.99</span>
+            <s class="previous-price">$169.99</s>
+          </div>
+          <button>
+            <img
+              src="./images/icon-cart.svg"
+              alt="icon-cart"
+              class="cart-icon"
+            />
+            Add to Cart
+          </button>
+        </div>
       </div>
     </main>
   </body>
